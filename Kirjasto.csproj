@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{716EC08E-1337-42EC-8045-D49D773231F7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Kirjasto</RootNamespace>
+    <AssemblyName>Kirjasto</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=8.0.30.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Asetukset.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Asetukset.Designer.cs">
+      <DependentUpon>Asetukset.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Asiakaspaate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Asiakaspaate.Designer.cs">
+      <DependentUpon>Asiakaspaate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Asiakkaat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Asiakkaat.Designer.cs">
+      <DependentUpon>Asiakkaat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kirjat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kirjat.Designer.cs">
+      <DependentUpon>Kirjat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lainaa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lainaa.Designer.cs">
+      <DependentUpon>Lainaa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lainaukset.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lainaukset.Designer.cs">
+      <DependentUpon>Lainaukset.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Palauta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Palauta.Designer.cs">
+      <DependentUpon>Palauta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UusiAsiakas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UusiAsiakas.Designer.cs">
+      <DependentUpon>UusiAsiakas.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Asetukset.resx">
+      <DependentUpon>Asetukset.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Asiakaspaate.resx">
+      <DependentUpon>Asiakaspaate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Asiakkaat.resx">
+      <DependentUpon>Asiakkaat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kirjat.resx">
+      <DependentUpon>Kirjat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lainaa.resx">
+      <DependentUpon>Lainaa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lainaukset.resx">
+      <DependentUpon>Lainaukset.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Palauta.resx">
+      <DependentUpon>Palauta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UusiAsiakas.resx">
+      <DependentUpon>UusiAsiakas.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="hakuGray.png" />
+    <Content Include="KirjastoLogo.ico" />
+    <Content Include="KirjastoLogo.png" />
+    <None Include="Resources\suljeB.png" />
+    <Content Include="KirjastoLogoM.ico" />
+    <Content Include="kortti.png" />
+    <None Include="Resources\kortti.png" />
+    <None Include="Resources\hakuGray.png" />
+    <Content Include="suljeB.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
